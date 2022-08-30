@@ -7,13 +7,15 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "jc.ac.it_college.std.s21016.android_task"
+        applicationId "jp.ac.it_college.std.s21016.Android_Task"
         minSdk 21
         targetSdk 32
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -27,7 +29,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 }

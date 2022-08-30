@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">ポケモンを見れるアプリ</string>
+    <string name="app_name">ポケモン御三家図鑑</string>
     <string name="display">表示</string>
-    <string name="select_pokemon">ポケモンを選んでください</string>
+    <string name="select_pokemon">ポケモンを選択してください</string>
     <string name="type">タイプ\n%1$s</string>
     <string name="weight">重さ\n%1$dkg</string>
     <string name="genus">種族\n%1$s</string>

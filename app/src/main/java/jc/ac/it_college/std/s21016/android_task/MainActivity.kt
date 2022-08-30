@@ -37,24 +37,26 @@ class MainActivity : AppCompatActivity() {
     }.build()
     private val service: PokemonService = retrofit.create(PokemonService::class.java)
     private val pokemonList = mapOf(
-        "ライコウ" to 243,
-        "エンテイ" to 244,
-        "スイクン" to 245,
-        "ルギア" to 249,
-        "グラードン" to 383,
-        "ディアルガ" to 483,
-        "パルキア" to 484,
-        "ギラティナ" to 487,
-        "ダークライ" to 491,
-        "アルセウス" to 493,
-        "レシラム" to 643,
-        "ゼクロム" to 644,
-        "キュレム" to 646,
-        "ゼルネアス" to 716,
-        "イベルタル" to 717,
-        "ボルケニオン" to 721,
-        "ソルガレオ" to 791,
-        "ルナアーラ" to 792,
+        "チコリータ" to 152,
+        "ヒノアラシ" to 155,
+        "ワニノコ" to 158,
+        "キモリ" to 252,
+        "アチャモ" to 255,
+        "ミズゴロウ" to 258,
+        "ヒコザル" to 387,
+        "ポッチャマ" to 390,
+        "ツタージャ" to 495,
+        "ポカブ" to 498,
+        "ミジュマル" to 501,
+        "ハリマロン" to 650,
+        "フォッコ" to 653,
+        "ケロマツ" to 656,
+        "モクロー" to 722,
+        "ニャビー" to 725,
+        "アシマリ" to 728,
+        "サルノリ" to 810,
+        "ヒバニー" to 813,
+        "メッソン" to 816,
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         )
         binding.btDisplay.setOnClickListener {
             val id = pokemonList[binding.spPokemon.selectedItem]
-            showPokemonInfo(id?:throw IllegalArgumentException("存在しないポケモンが選ばれました"))
+            showPokemonInfo(id?:throw IllegalArgumentException("存在しないポケモンが選択されました"))
         }
     }
 
@@ -97,7 +99,7 @@ class MainActivity : AppCompatActivity() {
     @WorkerThread
     private suspend fun getPokemonInfo(id: Int): PokemonInfo {
         return withContext(Dispatchers.IO) {
-            service.fetchPokemon(id).execute().body() ?: throw IllegalStateException("ポケモンが取れませんでした")
+            service.fetchPokemon(id).execute().body() ?: throw IllegalStateException("ポケモンが取得できませんでした")
         }
     }
 
@@ -105,7 +107,7 @@ class MainActivity : AppCompatActivity() {
     @WorkerThread
     private suspend fun getTypeInfo(id: Int): TypeInfo {
         return withContext(Dispatchers.IO) {
-            service.fetchType(id).execute().body() ?: throw IllegalStateException("ポケモンが取れませんでした")
+            service.fetchType(id).execute().body() ?: throw IllegalStateException("ポケモンが取得できませんでした")
         }
     }
 
@@ -113,7 +115,7 @@ class MainActivity : AppCompatActivity() {
     @WorkerThread
     private suspend fun getSpeciesInfo(id: Int): SpeciesInfo {
         return withContext(Dispatchers.IO) {
-            service.fetchSpecies(id).execute().body() ?: throw IllegalStateException("ポケモンが取れませんでした")
+            service.fetchSpecies(id).execute().body() ?: throw IllegalStateException("ポケモンが取得できませんでした")
         }
     }
 

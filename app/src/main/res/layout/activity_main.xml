@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/haikei" />
+
     <Spinner
         android:id="@+id/spPokemon"
         android:layout_width="0dp"
@@ -18,11 +28,12 @@
 
     <Button
         android:id="@+id/btDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="141dp"
+        android:layout_height="88dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#0000cd"
         android:text="@string/display"
-        android:textSize="60sp"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,7 +67,7 @@
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgPokemon"
-        tools:text="タイプ\n・くさ\n・どく" />
+        tools:text="タイプ\n・ほのお" />
 
     <TextView
         android:id="@+id/tvWeight"
@@ -67,7 +78,7 @@
         android:textSize="22sp"
         app:layout_constraintStart_toEndOf="@+id/tvType"
         app:layout_constraintTop_toBottomOf="@+id/imgPokemon"
-        tools:text="重さ\n69kg" />
+        tools:text="重さ\n7.9kg" />
 
     <TextView
         android:id="@+id/tvGenus"
@@ -78,7 +89,7 @@
         android:textSize="22sp"
         app:layout_constraintStart_toEndOf="@+id/tvType"
         app:layout_constraintTop_toBottomOf="@+id/tvWeight"
-        tools:text="種族\nたねポケモン" />
+        tools:text="種族\nひねずみポケモン" />
 
     <TextView
         android:id="@+id/tvFlavorText"
@@ -91,6 +102,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvGenus"
-        tools:text="生まれたときから　背中に\n不思議な　タネが　植えてあって\n体と　ともに　育つという。" />
+        tools:text="臆病で いつも 体を まるめている\n襲われると 背中の 炎を\n燃え上がらせて 身を守る。" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
